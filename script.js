@@ -8,6 +8,7 @@ let toUnit = document.getElementById('to-unit');
 
 let answer = document.getElementById('answer');
 
+
 button.addEventListener("click", function(){
     let result = 0;
     if(fromUnit.value == 'Fahrenheit' && toUnit.value == 'Celseus')
@@ -22,7 +23,10 @@ button.addEventListener("click", function(){
         result = (input.value - 32) * 5/9 + 273.15
     else if(fromUnit.value == 'Kelvin' && toUnit.value == 'Fahrenheit')
         result = (input.value - 273.15) * 9/5 + 32;
-    answer.innerHTML = `${input.value} ${fromUnit.value} is ${result} ${toUnit.value}`;
+    // button state logic
+    if(input.value != '' && fromUnit.value != 'From Unit' && toUnit.value != 'To Unit'){
+        answer.innerHTML = `${input.value} ${fromUnit.value} is ${result} ${toUnit.value}`;
+    }
 });
 
 
