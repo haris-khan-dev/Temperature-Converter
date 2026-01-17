@@ -12,13 +12,13 @@
         <p>Enter the temperature, select units and submit</p>
         <div class="inputs">
             <input type="number" placeholder="0.00">
-            <select>
+            <select id="from-unit">
                 <option value="Celseus">From Unit</option>
                 <option value="Celseus">Celseus</option>
                 <option value="Fahrenheit">Fahrenheit</option>
                 <option value="Kelvin">Kelvin</option>
             </select>
-            <select>
+            <select id="to-unit">
                 <option value="Celseus">To Unit</option>
                 <option value="Celseus">Celseus</option>
                 <option value="Fahrenheit">Fahrenheit</option>
@@ -26,6 +26,10 @@
             </select>
             <button>Convert</button>
         </div>
+        <div id="answer">
+
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
